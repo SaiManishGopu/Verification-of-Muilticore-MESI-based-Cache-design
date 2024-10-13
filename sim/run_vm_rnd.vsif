@@ -1,0 +1,30 @@
+session cpu_regress
+{
+	top_dir : $ENV(PWD)/regression/ ;
+	pre_session_script : <text> echo "pre_session_script" </text>;
+};
+
+
+group all_test {
+
+      run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache" ;
+      scan_script: "vm_scan.pl ius.flt shell.flt" ;
+      count : 1;
+      pre_commands: "";
+      timeout: 13000000;
+      sv_seed: 1;
+
+
+      test read_miss_icache {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 1;
+      };
+
+      test read_miss_icache_rnd {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache -svseed random" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 10;
+      };
+
+};

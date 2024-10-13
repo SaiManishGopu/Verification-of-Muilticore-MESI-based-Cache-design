@@ -1,0 +1,254 @@
+session cpu_regress
+{
+	top_dir : $ENV(PWD)/regression/ ;
+	pre_session_script : <text> echo "pre_session_script" </text>;
+};
+
+
+group all_test {
+
+      run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache" ;
+      scan_script: "vm_scan.pl ius.flt shell.flt" ;
+      count : 1;
+      pre_commands: "";
+      timeout: 13000000;
+      sv_seed: 1;
+
+
+
+      test test1 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache -define TEST1" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 1;
+      };
+
+      test test2 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache -define TEST2" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 1;
+      };
+
+      test test3 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache -define TEST3" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 1;
+      };
+
+      test test4 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache -define TEST4" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 1;
+      };
+
+      test test5 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache -define TEST5" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 1;
+      };
+
+      test test6 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache -define TEST6" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 1;
+      };
+
+      test test7 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache -define TEST7" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 1;
+      };
+
+      test test8 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache -define TEST8" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 1;
+      };
+
+      test test9 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache -define TEST9" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 1;
+      };
+
+      test test10 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache -define TEST10" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 91;
+      };
+	  
+	  test test11 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_dcache -define TEST11" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 100;
+      };
+	  
+	  test test12 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_hit_icache -define TEST12" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 50;
+      };
+	  
+	  test test13 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_hit_dcache -define TEST13" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 50;
+      };
+	  
+	  test test14 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=write_miss_dcache -define TEST14" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test15 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=write_hit_dcache -define TEST15" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test16 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_icache_replace -define TEST16" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test17 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_miss_dcache_replace -define TEST17" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test18 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=write_miss_dcache_replace -define TEST18" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test19 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=read_write_dcache_replace -define TEST19" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test20 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=write_request_shared -define TEST20" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test21 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=write_request_modified -define TEST21" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test22 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=modified_to_shared -define TEST22" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test23 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=modified_to_invalid -define TEST23" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test24 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=modified_to_modified -define TEST24" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test25 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=shared_to_shared -define TEST25" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test26 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=shared_to_invalid -define TEST26" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test27 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=shared_to_modified -define TEST27" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test28 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=exclusive_to_shared -define TEST28" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test29 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=exclusive_to_invalid -define TEST29" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test30 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=exclusive_to_modified -define TEST30" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test31 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=exclusive_to_exclusive -define TEST31" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test32 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=invalid_to_shared -define TEST32" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test33 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=invalid_to_modified -define TEST33" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test34 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=invalid_to_exclusive -define TEST34" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test35 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=exclusive_to_shared_write_miss -define TEST35" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test36 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=continuous_write_read_dcache -define TEST36" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test37 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=lv2_lru -define TEST37" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 50;
+      };
+	  
+	  test test38 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=write_read_dcache_replace -define TEST38" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 20;
+      };
+	  
+	  test test39 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=write_invalidate -define TEST39" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 50;
+      };
+	  
+
+};

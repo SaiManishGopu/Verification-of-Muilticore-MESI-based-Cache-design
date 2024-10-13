@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<vplanx:planRefinements xmlns:vplanx="http://www.cadence.com/vplanx">
+    <metaData>
+        <sourceTool>vManager CS</sourceTool>
+        <toolVersion>20.03</toolVersion>
+        <schemaVersion>1.0</schemaVersion>
+        <buildTime>2020-03-25 20:19:52</buildTime>
+    </metaData>
+    <planRef>
+        <planId>51154517-18f7-42f8-bc4a-c7d90992af10</planId>
+        <planPath>ProjectVerificationPlanSpring2018.vplanx</planPath>
+    </planRef>
+    <globalRefinement>
+        <excludeElementsRefinements>
+            <elementPath>
+                <elementName>Multi-Core Design</elementName>
+                <elementName>LV1 Cache to BUS_slash_LV2_slash_Mem interface </elementName>
+                <elementName>Assertions_slash_Checkers for LV2_slash_Mem</elementName>
+            </elementPath>
+            <elementPath>
+                <elementName>Multi-Core Design</elementName>
+                <elementName>Functional Coverage</elementName>
+                <elementName>Arbiter</elementName>
+            </elementPath>
+            <exclusionUser>m.d.quinn</exclusionUser>
+            <exclusionTime>1.618248057117E12</exclusionTime>
+        </excludeElementsRefinements>
+        <attributesRefinements>
+            <attributesRefinement>
+                <elementPath>
+                    <elementName>Multi-Core Design</elementName>
+                    <elementName>LV1 Cache to BUS_slash_LV2_slash_Mem interface </elementName>
+                    <elementName>Assertions_slash_Checkers for LV2_slash_Mem</elementName>
+                </elementPath>
+                <attributes/>
+                <exclusionUser>m.d.quinn</exclusionUser>
+                <exclusionTime>1.618248057117E12</exclusionTime>
+            </attributesRefinement>
+            <attributesRefinement>
+                <elementPath>
+                    <elementName>Multi-Core Design</elementName>
+                    <elementName>Functional Coverage</elementName>
+                    <elementName>Arbiter</elementName>
+                </elementPath>
+                <attributes/>
+                <exclusionUser>m.d.quinn</exclusionUser>
+                <exclusionTime>1.618248088452E12</exclusionTime>
+            </attributesRefinement>
+        </attributesRefinements>
+        <commentRefinements>
+            <commentRefinement>
+                <elementPath>
+                    <elementName>Multi-Core Design</elementName>
+                    <elementName>LV1 Cache to BUS_slash_LV2_slash_Mem interface </elementName>
+                    <elementName>Assertions_slash_Checkers for LV2_slash_Mem</elementName>
+                </elementPath>
+                <exclusionComment></exclusionComment>
+                <exclusionReviewer>unknown</exclusionReviewer>
+                <exclusionUser>m.d.quinn</exclusionUser>
+                <exclusionTime>1.618248057117E12</exclusionTime>
+            </commentRefinement>
+            <commentRefinement>
+                <elementPath>
+                    <elementName>Multi-Core Design</elementName>
+                    <elementName>Functional Coverage</elementName>
+                    <elementName>Arbiter</elementName>
+                </elementPath>
+                <exclusionComment></exclusionComment>
+                <exclusionReviewer>unknown</exclusionReviewer>
+                <exclusionUser>m.d.quinn</exclusionUser>
+                <exclusionTime>1.618248088452E12</exclusionTime>
+            </commentRefinement>
+        </commentRefinements>
+    </globalRefinement>
+</vplanx:planRefinements>
