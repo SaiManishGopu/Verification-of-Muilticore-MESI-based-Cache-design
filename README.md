@@ -1,6 +1,6 @@
 **Folder Structure of the project**:
 
-_design_ - Contains the design files for the HTAX protocol.
+_design_ - Contains the design files for the MESI design.
 
 _gold_ - Contains the memory model
 
@@ -32,4 +32,4 @@ The basic design specifications are based on following
 12. No write buffers.
 
 
-_Note_: The design contains several bug. More details of the bugs can be found in the Bug Report.pdf in the sim directory.
+_Note_: The design contains several bugs. More details of the bugs can be found in the Bug Report.pdf in the sim directory.
